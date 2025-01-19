@@ -1,0 +1,96 @@
+.list-page {
+    display: flex;
+    background-color: #f8f8f8;
+}
+
+/* サイドバー */
+.sideber {
+    width: 20%;
+    padding: 50px 30px;
+}
+
+.search--item {
+    height: 50px;
+    width: 100%;
+    border-radius: 45px;
+    border: 1px solid #e0dfde;
+    margin-bottom: 20px;
+}
+
+.search--button {
+    height: 40px;
+    width: 100%;
+    background-color: #f5c800;
+    color: #4b4b4b;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+.search--button:hover {
+    background-color: #ddb400;
+}
+
+.sideber__order {
+    margin-bottom: 30px;
+    border-bottom: 1px solid #e0dfde;
+}
+
+.select--group {
+    height: 50px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #e0dfde;
+    margin-bottom: 20px;
+}
+
+
+/* 商品詳細 */
+.product-list {
+    width: 80%; 
+    margin: 50px 40px;   
+}
+
+.addition__button{
+    text-align: right;
+}
+.addition--item {
+    height: 40px;
+    background-color: #ffa929;
+    border: none;
+    border-radius: 5px;
+    color: #4b4b4b;
+    padding: 10px 20px;
+    margin: 20px 0 20px 50px;
+    cursor: pointer;
+}
+.addition--item:hover {
+    background-color: #df9425;
+}
+
+.list__item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.list__group {
+    width: 30%;
+    border: 1px solid #efefef;
+    border-radius: 3px;
+    margin-bottom: 20px;
+}
+
+.list-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.list__type {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 0 10px
+}

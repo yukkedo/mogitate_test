@@ -1,0 +1,17 @@
+.header {
+    background-color: #FFFFFF;
+    height: 65px;
+}
+
+.header__inner {
+    margin: 0 auto;
+    padding: 15px 10px;
+    max-width: 1230px;
+}
+
+.header__logo {
+    color: #f5c800;
+    text-decoration: none;
+    font-size: 25px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
