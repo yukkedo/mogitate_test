@@ -34,100 +34,25 @@
 
     <div class="product-list">
         <div class="addition__button">
-            <button class="addition--item">+ 商品を追加</button>
+            <a class="addition--item" href="/products/register">+ 商品を追加</a>
         </div>
-        <div class="list__item">
-            <div class="list__group">
-                <div class="list-img">
-                    <a href=""><img src="{{ asset('storage/img/kiwi.png') }}" alt="キウイ"></a>
+        <div class="product-list__item">
+            @foreach($products as $product)
+            <div class="product-list__group">
+                <div class="product-list-img">
+                    <a href="{{ route('product.detail', $product->id) }}"><img src="{{ asset('storage/' . $product->image) }}" alt="{{ $product->name }}"></a>
                 </div>
-                <div class="list__type">
-                    <p>キウイ</p>
-                    <p>￥800</p>
-                </div>
-            </div>
-            <div class="list__group">
-                <div class="list-img">
-                    <a href=""><img src="{{ asset('storage/img/strawberry.png') }}" alt="ストロベリー"></a>
-                </div>
-                <div class="list__type">
-                    <p>ストロベリー</p>
-                    <p>￥1200</p>
+                <div class="product-list__type">
+                    <p>{{$product->name}}</p>
+                    <p>{{$product->price}}</p>
                 </div>
             </div>
-            <div class="list__group">
-                <div class="list-img">
-                    <a href=""><img src="{{ asset('storage/img/orange.png') }}" alt="オレンジ"></a>
-                </div>
-                <div class="list__type">
-                    <p>オレンジ</p>
-                    <p>￥850</p>
-                </div>
-            </div>
-            <div class="list__group">
-                <div class="list-img">
-                    <a href=""><img src="{{ asset('storage/img/watermelon.png') }}" alt="スイカ"></a>
-                </div>
-                <div class="list__type">
-                    <p>スイカ</p>
-                    <p>￥700</p>
-                </div>
-            </div>
-            <div class="list__group">
-                <div class="list-img">
-                    <a href=""><img src="{{ asset('storage/img/peach.png') }}" alt="ピーチ"></a>
-                </div>
-                <div class="list__type">
-                    <p>ピーチ</p>
-                    <p>￥1000</p>
-                </div>
-            </div>
-            <div class="list__group">
-                <div class="list-img">
-                    <a href=""><img src="{{ asset('storage/img/muscat.png') }}" alt="マスカット"></a>
-                </div>
-                <div class="list__type">
-                    <p>シャインマスカット</p>
-                    <p>￥1400</p>
-                </div>
-            </div>
-            <div class="list__group">
-                <div class="list-img">
-                    <a href=""><img src="{{ asset('storage/img/pineapple.png') }}" alt="パイナップル"></a>
-                </div>
-                <div class="list__type">
-                    <p>パイナップル</p>
-                    <p>￥800</p>
-                </div>
-            </div>
-            <div class="list__group">
-                <div class="list-img">
-                    <a href=""><img src="{{ asset('storage/img/grapes.png') }}" alt="ブドウ"></a>
-                </div>
-                <div class="list__type">
-                    <p>ブドウ</p>
-                    <p>￥1100</p>
-                </div>
-            </div>
-            <div class="list__group">
-                <div class="list-img">
-                    <a href=""><img src="{{ asset('storage/img/banana.png') }}" alt="バナナ"></a>
-                </div>
-                <div class="list__type">
-                    <p>バナナ</p>
-                    <p>￥600</p>
-                </div>
-            </div>
-            <div class="list__group">
-                <div class="list-img">
-                    <a href=""><img src="{{ asset('storage/img/melon.png') }}" alt="メロン"></a>
-                </div>
-                <div class="list__type">
-                    <p>メロン</p>
-                    <p>￥900</p>
-                </div>
-            </div>
+            @endforeach
+        </div>
+        <div class="product__paginate">
+            {{ $products->links() }}
         </div>
     </div>
 </div>
+
 @endsection

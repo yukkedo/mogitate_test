@@ -28,6 +28,7 @@
     margin-bottom: 30px;
     cursor: pointer;
 }
+
 .search--button:hover {
     background-color: #ddb400;
 }
@@ -48,49 +49,86 @@
 
 /* 商品詳細 */
 .product-list {
-    width: 80%; 
-    margin: 50px 40px;   
+    width: 80%;
+    margin: 50px 40px;
 }
 
-.addition__button{
+.addition__button {
     text-align: right;
 }
+
 .addition--item {
+    display: inline-block;
     height: 40px;
     background-color: #ffa929;
     border: none;
+    text-decoration: none;
     border-radius: 5px;
     color: #4b4b4b;
     padding: 10px 20px;
     margin: 20px 0 20px 50px;
     cursor: pointer;
 }
+
 .addition--item:hover {
     background-color: #df9425;
 }
 
-.list__item {
+.product-list__item {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
-.list__group {
+.product-list__group {
     width: 30%;
     border: 1px solid #efefef;
     border-radius: 3px;
     margin-bottom: 20px;
 }
 
-.list-img img {
+.product-list-img img {
     width: 100%;
     height: auto;
     display: block;
 }
 
-.list__type {
+.product-list__type {
     display: flex;
     justify-content: space-between;
     background-color: #fff;
     padding: 0 10px
+}
+
+/* .product__paginate {
+    margin-top: 10px;
+} */
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding-left: 0;
+}
+
+.pagination li {
+    margin: 0 5px;
+}
+
+.pagination li a,
+.pagination li span {
+    padding: 6px 12px;
+    text-decoration: none;
+    border-radius: 4px;
+    color: #4b4b4b;
+    background-color: #f8f8f8;
+}
+
+.pagination li.active a {
+    background-color: #4b4b4b;
+    color: white;
+}
+
+.pagination li a:hover {
+    background-color: #ddb400;
 }
