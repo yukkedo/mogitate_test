@@ -25,4 +25,4 @@ Route::get('/products/{product}', [MogitateController::class, 'detail'])->name('
 // 登録画面表示
 Route::get('/products/register', [MogitateController::class, 'create']);
 // 検索機能
-Route::get('/product/search', [MogitateController::class, 'index'])->name('product.search');
+Route::get('/product/search', [MogitateController::class, 'index'])->name('products.search');

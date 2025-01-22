@@ -10,7 +10,7 @@
         <div class="sideber__title">
             <h2>商品一覧</h2>
         </div>
-        <form class="search__form" action="{{ route('product.search') }}" method="get">
+        <form class="search__form" action="{{ route('products.search') }}" method="get">
             @csrf
             <div class="sideber__search">
                 <input class="search--item" name="keyword" type="text" placeholder="商品名で検索" value="{{ $keyword }}">
