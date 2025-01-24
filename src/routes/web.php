@@ -26,3 +26,7 @@ Route::get('/products/{product}', [MogitateController::class, 'detail'])->name('
 Route::get('/products/register', [MogitateController::class, 'create']);
 // 検索機能
 Route::get('/product/search', [MogitateController::class, 'index'])->name('products.search');
+// 更新機能
+Route::patch('/products/{product}/update', [MogitateController::class, 'update'])->name('products.update');
+// 削除機能
+Route::delete('/products/{product}/delete', [MogitateController::class, 'destroy'])->name('products.delete');

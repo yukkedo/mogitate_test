@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Product;
+use App\Http\Requests\ProductRequest;
 
 class MogitateController extends Controller
 {
@@ -32,8 +33,27 @@ class MogitateController extends Controller
         return view('detail', compact('product', 'seasons'));
     }
 
+    // 表示できていない
     public function create(Request $request)
     {
         return view('register');
+    }
+
+    public function update(ProductRequest $request)
+    {
+        $product = $request->only(['name', 'price', 'description']);
+        Product::find($request->id)->update($product);
+
+        // $img = $request->file('image');
+        // $path = $img->store('img', 'public');
+
+        // Product::create(['image' => $path]);
+        return redirect('/products');
+    }
+
+    public function destroy(Request $request)
+    {
+        Product::find($request->id)->delete();
+        return redirect('/products');
     }
 }
