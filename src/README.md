@@ -1,4 +1,4 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+<!-- <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">
 <a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
@@ -61,4 +61,30 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT). -->
+
+# 確認テスト＿もぎたて
+
+## 環境構築
+    ### Dockerビルド
+    1. git clone git@github.com:coachtech-material/laravel-docker-template.git
+    2. docker-compose up -d --build
+
+    ### Laravel環境構築
+    1. docker-compose exec php bash
+    2. composer install
+    3. .env.example ファイルから .envを作成し、環境変数を変更
+    4. php artisan key:generate
+    5. php artisan migrate
+    6. php artisan db:seed
+
+## 使用技術
+- php:7.4.9
+- Laravel:8
+- MySQL:8.0.26
+
+## ER図
+
+## URL
+- 開発環境：http://localhost/
+- phpMyAdmin：http://localhost:8080/
