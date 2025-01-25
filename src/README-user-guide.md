@@ -19,7 +19,7 @@
 - MySQL:8.0.26
 
 ## ER図
-
+![ER図](/home/user/coachtech/laravel/mogitate/src/storage/app/public/img/erd.png)
 
 ## URL
 - 開発環境：http://localhost/
