@@ -34,7 +34,7 @@ class MogitateController extends Controller
     }
 
     // 表示できていない
-    public function create(Request $request)
+    public function create()
     {
         return view('register');
     }
@@ -44,11 +44,12 @@ class MogitateController extends Controller
         $product = $request->only(['name', 'price', 'description']);
         Product::find($request->id)->update($product);
 
-        // $img = $request->file('image');
-        // $path = $img->store('img', 'public');
+        $filename = $request->getClientOriginalName();
+        $img = $request->image->storeAs('', $filename,'public');
 
-        // Product::create(['image' => $path]);
-        return redirect('/products');
+        $image = new Product();
+        $data = $image->create(['image' => $img]);
+        return redirect('/products', compact('data'));
     }
 
     public function destroy(Request $request)

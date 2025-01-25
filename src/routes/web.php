@@ -14,16 +14,16 @@ use App\Http\Controllers\MogitateController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 // 一覧画面表示
 Route::get('/products', [MogitateController::class, 'index']);
 // 詳細画面表示
 Route::get('/products/{product}', [MogitateController::class, 'detail'])->name('product.detail');
 // 登録画面表示
-Route::get('/products/register', [MogitateController::class, 'create']);
+Route::get('/products/register', [MogitateController::class, 'create'])->name('products.register');
 // 検索機能
 Route::get('/product/search', [MogitateController::class, 'index'])->name('products.search');
 // 更新機能

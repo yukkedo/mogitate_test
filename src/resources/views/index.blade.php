@@ -35,7 +35,7 @@
 
     <div class="product-list">
         <div class="addition__button">
-            <a class="addition--item" href="/products/register">+ 商品を追加</a>
+            <a class="addition--item" href="{{ route('products.register') }}">+ 商品を追加</a>
         </div>
         <div class="product-list__item">
             @foreach($products as $product)
