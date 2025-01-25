@@ -18,7 +18,9 @@
                 <input class="form__content--input" type="text" placeholder="商品名を入力">
             </div>
             <div class="form__error">
-
+                @error('name')
+                {{ $message }}
+                @enderror
             </div>
         </div>
         <div class="form__group">
@@ -30,7 +32,9 @@
                 <input class="form__content--input" type="text" placeholder="値段を入力">
             </div>
             <div class="form__error">
-
+                @error('price')
+                {{ $message }}
+                @enderror
             </div>
         </div>
         <div class="form__group">
@@ -43,7 +47,9 @@
                 <input id="uplode" class="form__content--button" type="file" hidden>
             </div>
             <div class="form__error">
-
+                @error('image')
+                {{ $message }}
+                @enderror
             </div>
         </div>
         <div class="form__group">
@@ -59,7 +65,9 @@
                 <input class="form__content--radio" type="checkbox">冬
             </div>
             <div class="form__error">
-
+                @error('season')
+                {{ $message }}
+                @enderror
             </div>
         </div>
         <div class="form__group">
@@ -71,11 +79,13 @@
                 <textarea class="form__content--text" placeholder="商品の説明を入力"></textarea>
             </div>
             <div class="form__error">
-
+                @error('description')
+                {{ $message }}
+                @enderror
             </div>
         </div>
         <div class="form__button">
-            <button class="form__button--back" type="submit">戻る</button>
+            <a class="form__button--back" href="/products">戻る</a>
             <button class="form__button--register">登録</button>
         </div>
     </form>
